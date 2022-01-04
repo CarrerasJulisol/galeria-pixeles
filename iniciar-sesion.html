@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- link a jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <!-- link a mi javascript -->
+    <script defer src="js/sesion.js"></script>
+
+    <!-- link a mi css -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- FAVICON para icono de pestaña-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <title>Iniciar Sesión | Gallery de Pixeles</title>
+</head>
+<body>
+     <!-- header con menu -->
+    <header class="header-2" id="header"></header>
+
+    <!-- seccion de iniciar sesion -->
+    <section class="registro">
+        <div class="tam-form">
+            <form id="formulario" action="" method="post" class="form-container">
+                <p class="orden-form">
+                    <label for="user" class="sub-titulos">Usuario</label>
+                    <input id="user" name="user" type="text" class="bordes-compl correcto">
+                </p>
+                <p class="orden-form">
+                    <label for="contraseña" class="sub-titulos">Contraseña</label>
+                    <input id="contraseña" class="bordes-compl" name="contraseña" type="password">
+                    <!-- mensajes de erorr -->
+                    <div id="error-nombre" class="text-error">El nombre de usuario o la contraseña es incorrecta.</div>
+                </p>
+                <div class="container-confir">
+                    <button id="entrar" class="entrar" value="entrar" type="button">Entrar</button>
+                </div>
+               
+            </form>
+        </div>
+    </section>
+
+    <!-- footer con redes sociales-->
+    <footer class="footer" id="footer"></footer>
+</body>
+</html>

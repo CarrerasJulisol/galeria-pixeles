@@ -1,0 +1,122 @@
+//HEADER PAGINA PRINCIPAL
+.header {
+    background: transparent;
+    height: 300px;
+    transition: 3s;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .cont-menu {
+        display: flex;
+        justify-content: space-between;
+
+        .seccion-link {
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                text-shadow: 1px 1px 1px #ffb683;
+            }
+        }
+    }
+
+    //TEXTO PRINCIPAL
+    .titulo {
+        display: flex;
+        justify-content: center;
+        padding: 140px;
+        transition: 3s;
+        font-family: "Oranienbaum";
+        cursor: pointer;
+
+        .titulo-estilo {
+            color: cornsilk;
+            font-size: 50px;
+            transition: 3s;
+        }
+
+        .nube {
+            width: 100px;
+            transform: 3s;
+        }
+
+        .nube-header {
+            width: 30px;
+        }
+
+        .estilo-en-header {
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 3px;
+        }
+
+        @media only screen and (max-width: 550px) {
+            padding: 80px;
+        }
+    }
+
+    //MENU
+    .menu {
+        visibility: hidden;
+        opacity: 0;
+
+        .boton-menu {
+            padding: 5px;
+            background: transparent;
+            border: 0px;
+            width: 50px;
+            cursor: pointer;
+        }
+
+        .icon-menu {
+            width: 100%;
+            filter: invert(1);
+       
+        }
+
+        .partes-menu {
+            list-style: none;
+            display: none;
+        }
+
+        .desplegable-visible {
+            padding-top: 10px;
+            padding-left: 10px;
+            top: 42px;
+            display: block;
+            color: white;
+            position: absolute;
+            right: 0px;
+            background: #93809e;
+            width: 20vw;
+            height: 100vh;
+
+            @media only screen and (max-width: 768px) {
+                width: 50%;
+            }
+        }
+    }
+
+   .en-header {
+        padding: 10px 0px;
+    } 
+    
+}
+
+.abajo {
+    background-color: #93809e;
+    height: 50px;
+    width: 100%;
+
+    .visible-menu {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+
+
+    }
+}

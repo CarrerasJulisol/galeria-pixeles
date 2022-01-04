@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link a jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <!-- link a mi javascript -->
+    <script defer src="js/sesion.js"></script>
+
+    <!-- link a mi css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FAVICON para icono de pestaña-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <title>Registrarme | Gallery de Pixeles</title>
+</head>
+<body>
+     <!-- header con menu -->
+    <header class="header-2" id="header"></header>
+    
+    <!-- seccion de registro -->
+    <section class="registro">
+        <div class="tam-form">
+            <form id="formulario" action="" method="post" class="form-container">
+                <p class="orden-form">
+                    <label for="usuario" class="sub-titulos">Usuario</label>
+                    <input id="usuario" name="usuario" type="text" class="bordes-compl">
+                    <!-- mensajes de erorr -->
+                    <div id="error-nombre" class="text-error">Ingresa un nombre de más de 3 caracteres</div>
+                </p>
+                <p class="orden-form">
+                    <label for="email" class="sub-titulos">Correo electrónico</label>
+                    <input id="email" name="email" class="bordes-compl">
+                    <!-- mensajes de erorr -->
+                    <div id="error-correo" class="text-error">Ingresa una dirección de correo válido</div>
+                </p>
+                <p class="orden-form">
+                    <label for="password" class="sub-titulos">Contraseña</label>
+                    <input id="password" name="password" type="password" class="bordes-compl">
+                    <!-- mensajes de erorr -->
+                <div id="error-contra" class="text-error">Ingresa una contraseña mayor a 4 caracteres</div>
+                </p>
+                <p class="orden-form">
+                    <label for="confirmar-pass" class="sub-titulos">Confirmar contraseña</label>
+                    <input id="confirmar-pass" name="confirmar-pass" type="password" class="bordes-compl">
+                    <!-- mensajes de erorr -->
+                <div id="error-coinciden" class="text-error">Cuidado, las contraseñas no coinciden.</div>
+                </p>
+                <div class="container-confir">
+                    <button id="confirmar" class="entrar" value="Confirmar" type="button">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- footer con redes sociales-->
+    <footer class="footer" id="footer"></footer>
+</body>
+</html>

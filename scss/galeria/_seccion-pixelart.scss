@@ -1,0 +1,32 @@
+//SECCION 3: QUE ES PIXEL ART
+.s-tres{
+    margin: 50px 0px;
+    display: flex;
+    justify-content: center;
+
+    .contenedor-preg {
+        width: 50%;
+        border: 1px #93809e solid;
+        padding: 10px;
+
+        .pregunta {
+            font-size: 30px;
+            text-align: center;
+            padding-bottom: 15px;
+            color: white;
+        }
+    
+        .parrafo {
+            color: white;
+            text-align: justify;
+            padding-bottom: 10px;
+            font-family: "Oranienbaum";
+        }
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            margin: 0px 50px;
+        }
+
+    }    
+}

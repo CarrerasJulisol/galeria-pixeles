@@ -1,0 +1,116 @@
+//SECCION 1: GALERIA
+.s-uno {
+    margin-top: 320px;
+    transition: 3s;
+}
+
+.desplegar {
+    transition: 3s;
+    margin-top: 100px;
+}
+
+.contenedor-tarjeta {
+    display: flex;
+    justify-content: center;
+    margin: 0px 10%;
+    flex-wrap: wrap;
+
+    //estilo tarjetas
+    .tarjeta {
+        position: relative;
+        margin: 25px 15px;
+
+        .animacion {
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+        }
+    
+        .estilo-tarjeta {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            -webkit-backface-visibility: hidden;
+            overflow: hidden;
+            background-color: #ffb683;
+            border: 3px solid #ffb683;
+            border-radius: 20px;
+
+            .texto-tarjeta {
+                font-size: 15px;
+                font-family: 'Pixel';
+                text-align: left;
+                padding: 0px 20px;
+                position: relative;
+                top: 40px;
+
+                .info-img {
+                    list-style: none;
+                    white-space: pre-line;
+                }
+            }
+        }
+
+        .frente {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .tam {
+                width: 100%;
+            }
+        }
+    
+        .dorso {
+            transform: rotateY(180deg);
+            text-align: left;
+        }
+
+    }
+
+    .fondo-abrir {
+        width: 50px;
+        position: relative;
+        left: 20px;
+        border-radius: 5px 5px 0px 0px;
+        text-align: center;
+        transition: 1s;
+        transform-style: preserve-3d;
+
+        .abrir-img {
+            width: 50px;
+            border-radius: 5px 5px 0px 0px;
+            visibility: visible;
+            color: white;
+            border: 0px;
+            background-color: #cf946a;
+            cursor: zoom-in;
+            height: 25px;
+        }
+
+        .dorso-boton {
+            visibility: hidden;
+        }
+
+    }
+
+    .al-girar {
+        transform: rotateY(180deg);
+        box-shadow: 0px 3px 18px 14px rgb(238 130 238 / 20%);
+        border-radius: 20px;
+    }
+
+    .girar-boton {
+        transform: rotateY(180deg);
+        left: 132px;
+        transition: 1s;
+        background-color: #ffb683;
+
+    }
+
+    @media only screen and (max-width: 550px) {
+        margin-top: 220px;
+    }
+}

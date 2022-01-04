@@ -1,0 +1,391 @@
+* {
+    margin:  0;
+    padding: 0;
+}
+//fuentes
+@font-face {
+    font-family: 'Autografo';
+    src: url('../fuentes/Autography.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('../fuentes/pixelmix.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Coldiac';
+    src: url('../fuentes/Coldiac.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Oranienbaum';
+    src: url('../fuentes/Oranienbaum.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Futura Light';
+    src: url('../fuentes/futura-light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Futura Medium';
+    src: url('../fuentes/futura-medium.ttf') format('truetype');
+}
+
+body { 
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+}
+
+// heafer pagina principal
+@import 'galeria/header-principal';
+
+// seccion 1: galeria
+@import 'galeria/seccion-galeria';
+
+// seccion 2: artista
+@import 'galeria/seccion-artista';
+
+// seccion 3: que es pixel art
+@import 'galeria/seccion-pixelart';
+
+// posicion de las nubes 
+@import 'base/nubes';
+
+// footer
+@import 'base/footer';
+
+// seccion del registro 
+.registro {
+    margin: 80px 0px;
+    display: flex;
+    height: 55vh;
+    justify-content: center;
+    align-items: center;
+
+    .tam-form {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+    
+            .orden-form {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 5px 10px;
+
+                .sub-titulos {
+                    font-family: "Futura Light";
+                    color: #ffe3d0;
+                }
+
+                .bordes-compl {
+                    border: 1px solid #7e3856;
+                }
+
+                
+            }
+
+            .text-error {
+                padding-left: 10px;
+                color: #29214e;
+                visibility: hidden;
+            }
+
+            .error-visible {
+                visibility: visible;
+            }
+
+            .container-confir {
+                display: flex;
+                justify-content: flex-start;
+                padding: 10px;
+
+                .entrar {
+                    background-color: #7e3856;
+                    padding: 4px;
+                    border-radius: 10px;
+                    border: 0px solid #CE97B0;
+                    color: #ffe3d0;
+
+                    &:hover {
+                        cursor: pointer;
+                        box-shadow: 0px 0px 6px 1px #4e486b;
+                        color: lightgray;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.header-2 {
+    height: 50px;
+    background-color: #93809e;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    cursor: pointer;
+
+    .cont-menu {
+        display: flex;
+        justify-content: space-between;
+
+        .seccion-link {
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                text-shadow: 1px 1px 1px #ffb683;
+            }
+        }
+    }
+
+    //TEXTO PRINCIPAL
+    .titulo {
+        display: flex;
+        justify-content: center;
+        padding: 140px;
+        transition: 3s;
+        font-family: "Oranienbaum";
+
+        .titulo-estilo {
+            color: cornsilk;
+            font-size: 50px;
+            transition: 3s;
+        }
+
+        .nube {
+            width: 100px;
+            transform: 3s;
+        }
+
+        .nube-header {
+            width: 30px;
+        }
+
+        .estilo-en-header {
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 3px;
+        }
+
+        @media only screen and (max-width: 550px) {
+            padding: 80px;
+        }
+    }
+
+    //MENU
+    .menu {
+        visibility: hidden;
+        opacity: 0;
+
+        .boton-menu {
+            padding: 5px;
+            background: transparent;
+            border: 0px;
+            width: 50px;
+            cursor: pointer;
+        }
+
+        .icon-menu {
+            width: 100%;
+            filter: invert(1);
+       
+        }
+
+        .partes-menu {
+            list-style: none;
+            display: none;
+        }
+
+        .desplegable-visible {
+            padding-top: 10px;
+            padding-left: 10px;
+            top: 42px;
+            display: block;
+            color: white;
+            position: absolute;
+            right: 0px;
+            background: #93809e;
+            width: 20vw;
+            height: 100vh;
+
+            @media only screen and (max-width: 768px) {
+                width: 50%;
+            }
+        }
+    }
+
+   .en-header {
+        padding: 10px 0px;
+    } 
+    
+    
+    .abajo {
+        background-color: #93809e;
+        height: 50px;
+        width: 100%;
+    
+        .visible-menu {
+            visibility: visible;
+            opacity: 1;
+            display: flex;
+            align-items: center;
+    
+    
+        }
+    }
+}
+
+//estilo de MI PERFIL
+.seccion-perfil {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+
+    .perfil-cont {
+        width: 50vw;
+
+        .nombre-img{
+            width: 100px;
+            height: 100px;
+            display: flex;
+            background-color: white;
+            border: 2px solid white;
+            border-radius: 50px;
+
+            .foto-perfil {
+                width: 100px;
+            }
+        }
+
+        .estilo-usuario{
+            padding-left: 120px;
+            position: relative;
+            bottom: 100px;
+            color: white;
+            display: flex;
+
+            .boton-cerrar-s {
+                background-color: transparent;
+                border: 0px solid;
+                cursor: pointer;
+                padding-left: 10px;
+
+                .ico-cerrar {
+                    width: 20px;
+                }
+            }
+        }
+
+        .img-mg {
+            color: white;
+            padding-top: 20px;
+        }
+    }
+}
+
+//img ABIERTAS
+
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    visibility: hidden;
+    opacity: 0;
+
+    .cont-img {
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+
+        .img-modal {
+            width: 500px;
+
+            @media only screen and (max-height: 612px) {
+                width: 80%;
+            }
+
+            @media only screen and (max-width: 426) {
+                width: 100%;
+            }
+
+            @media only screen and (min-width: 427) and (max-width: 540px) {
+                width: 80%;
+            }
+
+        }
+    }
+    
+
+    .descripcion-modal {
+        text-align: left;
+        color: #625d86;
+        background-color: rgb(222 213 214);
+        height: 100%;
+        padding-left: 50px;
+
+        .st-titulo {
+            padding-top: 10px;
+        }
+
+        .st-desc {
+            height: 50px;
+        }
+
+        .boton-mg {
+            background-color: #625d86;
+            padding: 4px;
+            border-radius: 10px;
+            border: 1px solid white;
+            color: white;
+        }
+    }
+}
+
+.modal-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+// boton entrar
+// error al completar usuario o contraseña
+.error {
+    box-shadow: 0px 0px 5px 0px #ff000078;
+}
+
+// estilo de las imagenes en el perfil
+#lista-like {
+    display: flex;
+    flex-wrap: wrap;
+
+    .tam-img-mg {
+        display: flex;
+        margin: 20px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffb683;
+        border: 5px solid #ffb683;
+        
+    
+        .img-mg {
+            width: 200px;
+        }
+    
+        .estilo-text {
+            color: white;
+        }
+    }
+}
